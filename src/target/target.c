@@ -103,11 +103,10 @@ extern struct target_type hla_target;
 extern struct target_type nds32_v2_target;
 extern struct target_type nds32_v3_target;
 extern struct target_type nds32_v3m_target;
-extern struct target_type or1k_target;
 extern struct target_type quark_x10xx_target;
 extern struct target_type quark_d20xx_target;
 extern struct target_type stm8_target;
-extern struct target_type riscv_target;
+extern struct target_type rv_target;
 
 static struct target_type *target_types[] = {
 	&arm7tdmi_target,
@@ -136,11 +135,10 @@ static struct target_type *target_types[] = {
 	&nds32_v2_target,
 	&nds32_v3_target,
 	&nds32_v3m_target,
-	&or1k_target,
 	&quark_x10xx_target,
 	&quark_d20xx_target,
 	&stm8_target,
-	&riscv_target,
+	&rv_target,
 #if BUILD_TARGET64
 	&aarch64_target,
 #endif

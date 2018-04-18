@@ -1,8 +1,11 @@
-#ifndef TARGET__RISCV__GDB_REGS_H
-#define TARGET__RISCV__GDB_REGS_H
+#ifndef TARGET__RISCV_RV_GDB_REGS_H
+#define TARGET__RISCV_RV_GDB_REGS_H
+
+#include "rv_encoding.h"
 
 /* gdb's register list is defined in riscv_gdb_reg_names gdb/riscv-tdep.c in
  * its source tree. We must interpret the numbers the same here. */
+
 enum gdb_regno {
 	GDB_REGNO_ZERO = 0,        /* Read-only register, always 0.  */
 	GDB_REGNO_RA = 1,          /* Return Address.  */
@@ -85,8 +88,11 @@ enum gdb_regno {
 	GDB_REGNO_MSTATUS = CSR_MSTATUS + GDB_REGNO_CSR0,
 	GDB_REGNO_CSR4095 = GDB_REGNO_CSR0 + 4095,
 	GDB_REGNO_PRIV = 4161,
+	GDB_REGNO_NPC,
+	GDB_REGNO_PPC,
 	GDB_REGNO_COUNT
 };
+
 
 const char *gdb_regno_name(enum gdb_regno regno);
 

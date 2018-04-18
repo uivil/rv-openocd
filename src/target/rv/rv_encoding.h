@@ -40,60 +40,6 @@
 #define SSTATUS_UXL         0x0000000300000000
 #define SSTATUS64_SD        0x8000000000000000
 
-#define DCSR_XDEBUGVER      (3U<<30)
-#define DCSR_NDRESET        (1<<29)
-#define DCSR_FULLRESET      (1<<28)
-#define DCSR_EBREAKM        (1<<15)
-#define DCSR_EBREAKH        (1<<14)
-#define DCSR_EBREAKS        (1<<13)
-#define DCSR_EBREAKU        (1<<12)
-#define DCSR_STOPCYCLE      (1<<10)
-#define DCSR_STOPTIME       (1<<9)
-#define DCSR_CAUSE          (7<<6)
-#define DCSR_DEBUGINT       (1<<5)
-#define DCSR_HALT           (1<<3)
-#define DCSR_STEP           (1<<2)
-#define DCSR_PRV            (3<<0)
-
-#define DCSR_CAUSE_NONE     0
-#define DCSR_CAUSE_SWBP     1
-#define DCSR_CAUSE_HWBP     2
-#define DCSR_CAUSE_DEBUGINT 3
-#define DCSR_CAUSE_STEP     4
-#define DCSR_CAUSE_HALT     5
-
-#define MCONTROL_TYPE(xlen)    (0xfULL<<((xlen)-4))
-#define MCONTROL_DMODE(xlen)   (1ULL<<((xlen)-5))
-#define MCONTROL_MASKMAX(xlen) (0x3fULL<<((xlen)-11))
-
-#define MCONTROL_SELECT     (1<<19)
-#define MCONTROL_TIMING     (1<<18)
-#define MCONTROL_ACTION     (0x3f<<12)
-#define MCONTROL_CHAIN      (1<<11)
-#define MCONTROL_MATCH      (0xf<<7)
-#define MCONTROL_M          (1<<6)
-#define MCONTROL_H          (1<<5)
-#define MCONTROL_S          (1<<4)
-#define MCONTROL_U          (1<<3)
-#define MCONTROL_EXECUTE    (1<<2)
-#define MCONTROL_STORE      (1<<1)
-#define MCONTROL_LOAD       (1<<0)
-
-#define MCONTROL_TYPE_NONE      0
-#define MCONTROL_TYPE_MATCH     2
-
-#define MCONTROL_ACTION_DEBUG_EXCEPTION   0
-#define MCONTROL_ACTION_DEBUG_MODE        1
-#define MCONTROL_ACTION_TRACE_START       2
-#define MCONTROL_ACTION_TRACE_STOP        3
-#define MCONTROL_ACTION_TRACE_EMIT        4
-
-#define MCONTROL_MATCH_EQUAL     0
-#define MCONTROL_MATCH_NAPOT     1
-#define MCONTROL_MATCH_GE        2
-#define MCONTROL_MATCH_LT        3
-#define MCONTROL_MATCH_MASK_LOW  4
-#define MCONTROL_MATCH_MASK_HIGH 5
 
 #define MIP_SSIP            (1 << IRQ_S_SOFT)
 #define MIP_HSIP            (1 << IRQ_H_SOFT)
